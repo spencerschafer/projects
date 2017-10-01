@@ -1,8 +1,8 @@
 # projects
-These are my completed projects.
+These are my completed projects:
 
 exam-5 contains my level 5 exam solutions for WeThinkCode_. 
 
 libft is a recreation of the standard library functions.
 
-GNL is a basic recreation of getline() using the newline character.
+gnl is a basic recreation of getline() using the newline character.
