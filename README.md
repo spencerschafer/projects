@@ -1,4 +1,4 @@
-# Completed Projects.
+# Various Completed Projects.
 
 exam-5 contains my level 5 exam solutions for WeThinkCode_. 
 
