@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sschafer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/06 10:58:52 by sschafer          #+#    #+#             */
-/*   Updated: 2017/08/14 10:08:03 by sschafer         ###   ########.fr       */
+/*   Created: 2017/06/16 10:47:42 by sschafer          #+#    #+#             */
+/*   Updated: 2017/06/19 14:15:02 by sschafer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-
 #include "libft.h"
-#define BUFF_SIZE 2
 
-int get_next_line(const int fd, char **line);
+void	ft_striter(char *s, void (*f)(char *))
+{
+	int i;
 
-#endif
+	i = 0;
+	if ((s != NULL) && (f != NULL))
+		while (s[i] != '\0')
+			f(&s[i++]);
+}

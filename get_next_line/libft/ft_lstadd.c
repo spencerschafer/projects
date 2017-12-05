@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sschafer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/06 10:58:52 by sschafer          #+#    #+#             */
-/*   Updated: 2017/08/14 10:08:03 by sschafer         ###   ########.fr       */
+/*   Created: 2017/07/02 16:23:56 by sschafer          #+#    #+#             */
+/*   Updated: 2017/07/03 06:28:34 by sschafer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-
 #include "libft.h"
-#define BUFF_SIZE 2
 
-int get_next_line(const int fd, char **line);
+void		ft_lstadd(t_list **alst, t_list *new)
+{
+	t_list *temp;
 
-#endif
+	temp = *alst;
+	*alst = new;
+	new->next = temp;
+}
+
+/*
+**...**alst
+**		|
+**pointerfirstlink - pointerfirstlinkNEXT
+**
+**store pointerfirstlink in temp variable
+**dereference *alst and change it to new
+**pointernewNEXT needs to point to temp
+*/

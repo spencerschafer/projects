@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sschafer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/06 10:58:52 by sschafer          #+#    #+#             */
-/*   Updated: 2017/08/14 10:08:03 by sschafer         ###   ########.fr       */
+/*   Created: 2017/06/13 12:33:50 by sschafer          #+#    #+#             */
+/*   Updated: 2017/06/26 06:54:30 by sschafer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-
 #include "libft.h"
-#define BUFF_SIZE 2
 
-int get_next_line(const int fd, char **line);
+char	*ft_strstr(const char *big, const char *little)
+{
+	size_t i;
+	size_t len_little;
 
-#endif
+	i = 0;
+	len_little = ft_strlen((char *)little);
+	if (len_little == 0)
+		return ((char *)big);
+	while (big[i] != '\0')
+	{
+		if (ft_strncmp(big + i, little, len_little) == 0)
+			return ((char *)big + i);
+		++i;
+	}
+	return (NULL);
+}
