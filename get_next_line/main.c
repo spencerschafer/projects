@@ -37,7 +37,7 @@ int				main(int argc, char **argv)
 		}
 			//printf("------\n");
 			//printf("[%s]\n", line);
-			printf("[%i]\n", ret);
+			//printf("[%i]\n", ret);
 			free(line);
 	}
 	return (0);
