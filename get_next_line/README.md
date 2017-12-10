@@ -1,22 +1,22 @@
 # To run this program type the following:
-cd libft
+`cd libft`
 
-make
+`make`
 
-cd ..
+`cd ..`
 
-gcc -Wall -Werror -Wextra main.c get_next_line.c -Ilibft/includes libft/libft.a -o gnl
+`gcc -Wall -Werror -Wextra main.c get_next_line.c -Ilibft/includes libft/libft.a -o gnl`
 
-./gnl 2229.txt
+`./gnl 2229.txt`
 
 # To remove created files type the following:
-cd libft
+`cd libft`
 
-make fclean
+`make fclean`
 
-cd ..
+`cd ..`
 
-rm gnl
+`rm gnl`
 
 # Note:
 This folder contains a slightly modified version of get_next_line and libft
