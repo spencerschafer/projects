@@ -7,7 +7,6 @@ public class Point<T> {
         this.x = x;
         this.y = y;
     }
-
     public T getX() {
         return x;
     }
