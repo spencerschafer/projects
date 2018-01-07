@@ -1,22 +1,22 @@
 import java.util.*;
 
 public class Coordinates {
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        /**
+		/**
 		 * To find the snail solution of the N-puzzle:
 		 *
-         * X increases until X is equivalent to the dimension, then
+		 * X increases until X is equivalent to the dimension, then
 		 * Y increases until Y is equivalent to the dimension, then
 		 * X decreases until X is equivalent to starting_x_value + 1, then
 		 * Y decreases until Y is equivalent to starting_y_value + 1, then
 		 * repeat process adjusting the corresponding minimum and maximum values;
 		 *
-         * Continue this cycle until the key's value is  equal to (dimensions squared - 1);
-         *
-         * if dimensions is an odd number, x value of blank tile + 1
-         * if dimensions is an even number, x value of blank tile - 1
-         */
+		 * Continue this cycle until the key's value is  equal to (dimensions squared - 1);
+		 *
+		 * if dimensions is an odd number, x value of blank tile + 1
+		 * if dimensions is an even number, x value of blank tile - 1
+		 */
 
 		//HashMap initialisation
 		HashMap<Integer, Point> goalState = new HashMap<>();
@@ -94,15 +94,15 @@ public class Coordinates {
 		goalState.put(0, new Point<>(xIncreasingY_yDecreasingX, xDecreasingY_yIncreasingX));
 
 		//test code for printing coordinates
-        Point tile;
-        for (int i = 1; i < goalState.size(); ++i) {
-            tile = goalState.get(i);
-            System.out.println("Tile " + i + ": (" + tile.getX() + ";" + tile.getY() + ")" );
-			}
+		Point tile;
+		for (int i = 1; i < goalState.size(); ++i) {
+			tile = goalState.get(i);
+			System.out.println("Tile " + i + ": (" + tile.getX() + ";" + tile.getY() + ")" );
+		}
 
 		//blank tile printed last to correspond with coordinates
-        tile = goalState.get(0);
+		tile = goalState.get(0);
 		System.out.println("Tile " + 0 + ":  (" + tile.getX() + ";" + tile.getY() + ")" );
 		System.out.println("HashMap contains " + goalState.size() + " values.");
-    }
+	}
 }
