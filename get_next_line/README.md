@@ -1,4 +1,6 @@
-# To run this program type the following:
+# To run this program, type the following from the command line:
+`cd ~/projects/get_next_line`
+
 `cd libft`
 
 `make`
@@ -9,7 +11,9 @@
 
 `./gnl 2229.txt`
 
-# To remove created files type the following:
+# To remove created files, type the following from the command line:
+`cd ~/projects/get_next_line`
+
 `cd libft`
 
 `make fclean`
