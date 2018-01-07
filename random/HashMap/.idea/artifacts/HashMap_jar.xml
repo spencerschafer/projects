@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="HashMap:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/HashMap_jar</output-path>
-    <root id="archive" name="HashMap.jar">
-      <element id="module-output" name="HashMap" />
-    </root>
-  </artifact>
-</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="coordinates:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/coordinates_jar</output-path>
+    <root id="archive" name="coordinates.jar">
+      <element id="module-output" name="coordinates" />
+    </root>
+  </artifact>
+</component>
