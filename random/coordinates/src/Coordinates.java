@@ -97,12 +97,12 @@ public class Coordinates {
 		Point tile;
 		for (int i = 1; i < goalState.size(); ++i) {
 			tile = goalState.get(i);
-			System.out.println("Tile " + i + ": (" + tile.getX() + ";" + tile.getY() + ")" );
+			System.out.println("Tile " + i + ": (" + tile.getX() + ", " + tile.getY() + ")" );
 		}
 
 		//blank tile printed last to correspond with coordinates
 		tile = goalState.get(0);
-		System.out.println("Tile " + 0 + ":  (" + tile.getX() + ";" + tile.getY() + ")" );
+		System.out.println("Tile " + 0 + ":  (" + tile.getX() + ", " + tile.getY() + ")" );
 		System.out.println("HashMap contains " + goalState.size() + " values.");
 	}
 }
