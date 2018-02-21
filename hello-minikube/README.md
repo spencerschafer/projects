@@ -34,5 +34,3 @@ See information relating to Kubernetes cluster
 See which docker images are currently stored
 `docker images`
 
-# Note:
-This is a basica implementation of a Kubernetes cluster running a containerized Node.js server.
