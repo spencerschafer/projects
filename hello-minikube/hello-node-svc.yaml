@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: node-service
+spec:
+  selector:
+    app: node
+  ports:
+  - protocol: TCP
+    port: 80 # this value has no specific range
+    targetPort: 8080 # this value to be within a certain range; so far 8080 works
+  type: NodePort # exposes cluster externally
