@@ -22,6 +22,9 @@
 
 # Additional Commands:
 
+Kubernetes GUI
+`minikube dashboard`
+
 See current deployments
 `kubectl get deployments`
 
@@ -33,4 +36,3 @@ See information relating to Kubernetes cluster
 
 See which docker images are currently stored
 `docker images`
-
