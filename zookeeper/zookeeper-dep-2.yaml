@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zookeeper-dep-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zookeeper
+  template:
+    metadata:
+      labels:
+        app: zookeeper
+    spec:
+      containers:
+      - name: zookeeper-2
+        image: spencerschafer/zookeeper
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 2183
+        - containerPort: 2888
+        - containerPort: 3888
+        env:
+        - name: ZOOKEEPER_ID
+          value: "2"
+      imagePullSecrets:
+      - name: dockerprivateregistrykey
