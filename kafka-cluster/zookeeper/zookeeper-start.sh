@@ -7,6 +7,15 @@ cat /zookeeper/config/kafka-zookeeper.properties | sed \
 > /zookeeper/config/zookeeper.properties
 echo "[Saving done]"
 
+echo "[Setting Zookeeper properties]"
+if [ "$ZOOKEEPER_ID" == "1" ]; then
+	sed	-i -e  "s/zookeeper-svc-1/0.0.0.0/g" /zookeeper/config/zookeeper.properties
+elif [ "$ZOOKEEPER_ID" == "2" ]; then
+	sed -i -e  "s/zookeeper-svc-2/0.0.0.0/g" /zookeeper/config/zookeeper.properties
+elif [ "$ZOOKEEPER_ID" == "3" ]; then
+	sed -i -e  "s/zookeeper-svc-3/0.0.0.0/g" /zookeeper/config/zookeeper.properties
+fi
+
 # creating directory
 echo $ZOOKEEPER_ID > /zookeeper/data/myid
 

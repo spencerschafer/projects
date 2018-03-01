@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-broker3-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-broker3
+  template:
+    metadata:
+      labels:
+        app: kafka-broker3
+    spec:
+      hostname: kafka-broker3-svc
+      containers:
+      - name: kafka-broker3
+        image: foundery.azurecr.io/foundery/kafka/broker
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9092
+        - containerPort: 7203
+        - containerPort: 32400
+        env:
+        - name: BROKER_ID
+          value: "3"
+        - name: KAFKA_PORT
+          value: "9092"
+        - name: EXTERNAL_PORT
+          value: "32400"
+        - name: HOST_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
+        - name: INTERNAL_IP
+          value: "kafka-broker3-svc"
+        - name: ZOOKEEPER_CONNECTION_STRING
+          value: "zookeeper-svc-1:2181,zookeeper-svc-2:2181,zookeeper-svc-3:2181"
+        - name: JMX_PORT
+          value: "7203"

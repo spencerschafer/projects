@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-broker3-svc
+  labels:
+    service: kafka-broker3-svc
+spec:
+  ports:
+  - name: kafka-broker3-svc-port
+    targetPort: 9092
+    port: 9092
+    nodePort: 32400
+    protocol: TCP
+  - name: kafka-broker3-jmx-port
+    targetPort: 7203
+    port: 7203
+    protocol: TCP
+  selector:
+    app: kafka-broker3
+  type: NodePort
