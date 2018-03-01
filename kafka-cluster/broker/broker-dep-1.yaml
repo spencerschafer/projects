@@ -15,7 +15,7 @@ spec:
       hostname: broker-svc-1
       containers:
       - name: broker-1
-        image: foundery.azurecr.io/foundery/kafka/broker
+        image: spencerschafer/broker
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9092

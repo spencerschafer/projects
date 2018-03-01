@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: broker-3
+  name: broker-dep-3
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
       hostname: broker-svc-3
       containers:
       - name: broker-3
-        image: foundery.azurecr.io/foundery/kafka/broker
+        image: spencerschafer/broker
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9092
