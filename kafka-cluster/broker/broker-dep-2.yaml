@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kafka-broker2-deployment
+  name: broker-dep-2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kafka-broker2
+      app: broker-2
   template:
     metadata:
       labels:
-        app: kafka-broker2
+        app: broker-2
     spec:
-      hostname: kafka-broker2-svc
+      hostname: broker-svc-2
       containers:
-      - name: kafka-broker2
+      - name: broker-2
         image: foundery.azurecr.io/foundery/kafka/broker
         imagePullPolicy: IfNotPresent
         ports:

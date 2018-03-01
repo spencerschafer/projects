@@ -1,15 +1,13 @@
 #!/bin/bash
 
 # replacing files values with ENV variables
-echo "[Saving ENVs to /kafka/config/zookeeper.properties]"
 cat /zookeeper/config/kafka-zookeeper.properties | sed \
 	-e "s|{{MAX_CLIENT_CONNECTIONS}}|$MAX_CLIENT_CONNECTIONS|g" \
 > /zookeeper/config/zookeeper.properties
-echo "[Saving done]"
 
-echo "[Setting Zookeeper properties]"
+# modifying zookeeper.properties
 if [ "$ZOOKEEPER_ID" == "1" ]; then
-	sed	-i -e  "s/zookeeper-svc-1/0.0.0.0/g" /zookeeper/config/zookeeper.properties
+	sed -i -e  "s/zookeeper-svc-1/0.0.0.0/g" /zookeeper/config/zookeeper.properties
 elif [ "$ZOOKEEPER_ID" == "2" ]; then
 	sed -i -e  "s/zookeeper-svc-2/0.0.0.0/g" /zookeeper/config/zookeeper.properties
 elif [ "$ZOOKEEPER_ID" == "3" ]; then

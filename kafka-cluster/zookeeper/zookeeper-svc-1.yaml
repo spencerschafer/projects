@@ -8,15 +8,15 @@ spec:
   selector:
     app: zookeeper
   ports:
-    - name: zk-1-client-port
+    - name: zk-client-port-1
       protocol: TCP
       port: 2181
       targetPort: 2181
-    - name: zk-1-port-leader
+    - name: zk-port-leader-1
       protocol: TCP
       port: 2888
       targetPort: 2888
-    - name: zk-1-leader-election-port
+    - name: zk-leader-1
       protocol: TCP
       port: 3888
       targetPort: 3888
