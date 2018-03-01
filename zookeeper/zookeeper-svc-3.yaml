@@ -1,22 +1,22 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: zookeeper-svc-0
+  name: zookeeper-svc-3
   labels:
     service: zookeeper
 spec:
   selector:
     app: zookeeper
   ports:
-    - name: zk-0-client-port
+    - name: zk-3-client-port
       protocol: TCP
       port: 2181
       targetPort: 2181
-    - name: zk-0-port-leader
+    - name: zk-3-port-leader
       protocol: TCP
       port: 2888
       targetPort: 2888
-    - name: zk-0-leader-election-port
+    - name: zk-3-leader-election-port
       protocol: TCP
       port: 3888
       targetPort: 3888

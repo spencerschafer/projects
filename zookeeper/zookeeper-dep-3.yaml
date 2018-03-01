@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zookeeper-dep-0
+  name: zookeeper-dep-3
 spec:
   replicas: 1
   selector:
@@ -13,7 +13,7 @@ spec:
         app: zookeeper
     spec:
       containers:
-      - name: zookeeper-0
+      - name: zookeeper-3
         image: spencerschafer/zookeeper
         imagePullPolicy: IfNotPresent
         ports:
@@ -22,6 +22,6 @@ spec:
         - containerPort: 3888
         env:
         - name: ZOOKEEPER_ID
-          value: "0"
+          value: "3"
       imagePullSecrets:
       - name: dockerprivateregistrykey
